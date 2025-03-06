@@ -13,8 +13,17 @@ include 'db_connect.php';
 </head>
 
 <body>
+    <nav>
+        <ul>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="polling_unit_results.php">Polling Unit Results</a></li>
+            <li><a href="lga_results.php">LGA Results</a></li>
+            <li><a href="new_polling_unit.php">Add New Polling Unit</a></li>
+        </ul>
+    </nav>
     <div class="container">
         <div class="form-container">
+
             <h2>Total LGA Results</h2>
             <form method="POST">
                 <label for="lga_id">Select Local Government:</label>

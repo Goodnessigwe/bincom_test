@@ -32,8 +32,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
+    <nav>
+        <ul>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="polling_unit_results.php">Polling Unit Results</a></li>
+            <li><a href="lga_results.php">LGA Results</a></li>
+            <li><a href="new_polling_unit.php">Add New Polling Unit</a></li>
+        </ul>
+    </nav>
     <div class="container">
         <div class="form-container">
+
             <h2>Add Polling Unit Result</h2>
             <form method="POST">
                 <label>Select Polling Unit:</label>

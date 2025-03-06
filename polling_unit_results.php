@@ -13,20 +13,29 @@ include 'db_connect.php';
 </head>
 
 <body>
+    <nav>
+        <ul>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="polling_unit_results.php">Polling Unit Results</a></li>
+            <li><a href="lga_results.php">LGA Results</a></li>
+            <li><a href="new_polling_unit.php">Add New Polling Unit</a></li>
+        </ul>
+    </nav>
     <div class="container">
         <div class="form-container">
+
             <h2>Polling Unit Results</h2>
             <form method="GET">
                 <label>Select Polling Unit:</label>
                 <select name="polling_unit_id" required>
                     <option value="">-- Choose --</option>
                     <?php
-                $query = "SELECT uniqueid, polling_unit_name FROM polling_unit";
-                $result = $conn->query($query);
-                while ($row = $result->fetch_assoc()) {
-                    echo "<option value='{$row['uniqueid']}'>{$row['polling_unit_name']}</option>";
-                }
-                ?>
+                    $query = "SELECT uniqueid, polling_unit_name FROM polling_unit";
+                    $result = $conn->query($query);
+                    while ($row = $result->fetch_assoc()) {
+                        echo "<option value='{$row['uniqueid']}'>{$row['polling_unit_name']}</option>";
+                    }
+                    ?>
                 </select>
                 <button type="submit">Get Results</button>
             </form>
