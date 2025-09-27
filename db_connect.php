@@ -1,5 +1,5 @@
 <?php
-$host = "localhost";
+$host = "localhos";
 $user = "root";
 $password = "";
 $dbname = "bincom_test";
